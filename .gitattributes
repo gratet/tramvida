@@ -1,0 +1,43 @@
+# --- TEXT FILES (force LF endings + UTF-8) ---
+* text=auto eol=lf
+
+# YAML (Jekyll config and data)
+_config.yml text working-tree-encoding=UTF-8
+_data/*.yml text working-tree-encoding=UTF-8
+_includes/*.html text working-tree-encoding=UTF-8
+_layouts/*.html text working-tree-encoding=UTF-8
+
+# Markdown content
+*.md text working-tree-encoding=UTF-8
+
+# Templates and web assets
+*.html text working-tree-encoding=UTF-8
+*.css text working-tree-encoding=UTF-8
+*.js text working-tree-encoding=UTF-8
+*.json text working-tree-encoding=UTF-8
+*.xml text working-tree-encoding=UTF-8
+*.txt text working-tree-encoding=UTF-8
+
+# --- BINARY FILES (no diffs) ---
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+# --- MISC ---
+# Avoid CRLF pollution in scripts
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# GitHub linguist configuration
+.gitattributes text
+.gitignore text
+LICENSE text
+README.md text

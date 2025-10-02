@@ -1,0 +1,40 @@
+# --- JEKYLL BUILD FILES ---
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# --- LOGS AND TEMP FILES ---
+*.log
+*.tmp
+*.swp
+*.swo
+
+# --- NODE / YARN (si uses plugins amb npm) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- OS FILES ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
+
+# --- EDITORS ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- BACKUPS ---
+*~
+*.bak
+*.old
+
+# --- DEPLOYMENT / OUTPUT ---
+_site/
+.cache/
+dist/
+tmp/

@@ -1,0 +1,27 @@
+default_lang: es
+
+project_info:
+  minimal: false
+  name: "Proyecto Tranvía del Camp"
+  funding: "Con el apoyo de Ministerio de ..."
+  contact_email: "xavier.delclos@urv.cat"
+  website: "https://gratet.github.io/tramvida/"
+  logos:
+    - "/assets/images/logos/dgeo-bandera-color.png"
+    - "/assets/images/logos/logo-gratet.jpg"
+
+style:
+  green: "#2ea44f"
+  green_hover: "#238636"
+  black: "#222222"
+  white: "#ffffff"
+  link: "#0077cc"
+  lang_active: "#2ea44f"
+  hero_text: "#ffffff"
+
+template:
+  name: "GRATETemplates"
+  maintainer: "Grup de Recerca en Anàlisi Territorial i Estudis Turístics (GRATET)"
+  url: "https://gratet.urv.cat"
+
+#google_site_verification: "abc123XYZ_your_code_here"

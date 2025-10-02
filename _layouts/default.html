@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.default_lang | default: 'ca' }}">
+  
+  {% include head.html %}
+
+  <body>
+    <header class="hero" style="background-image: url('{{ page.hero_image | relative_url }}')">
+      <div class="hero-overlay">
+
+        <!-- Language selector -->
+        <div class="lang-container">
+          <div class="lang-selector">
+            <a href="{{ site.baseurl }}/ca/" title="Català" class="{% if page.lang == 'ca' %}active{% endif %}">🇦🇩</a>
+            <a href="{{ site.baseurl }}/es/" title="Español" class="{% if page.lang == 'es' %}active{% endif %}">🇪🇸</a>
+            <a href="{{ site.baseurl }}/en/" title="English" class="{% if page.lang == 'en' %}active{% endif %}">🇬🇧</a>
+          </div>
+        </div>
+
+        <div class="hero-badge">
+          Fet amb <i class="fa-solid fa-heart"></i> 
+          <a href="{{ site.template.url }}" target="_blank">{{ site.template.name }}</a>
+        </div>
+        
+
+        <!-- Title + description -->
+        <h1>{{ page.title }}</h1>
+        <p class="subtitle">{{ page.description }}</p>
+
+        <!-- CTA (text from _data/translations.yml) -->
+        {% assign lang = page.lang | default: site.default_lang %}
+        {% assign cta_text = site.data.translations.cta_text[lang] %}
+        {% if page.survey_url %}
+          <a href="{{ page.survey_url }}" class="cta-button">
+            {{ cta_text }}
+          </a>
+        {% endif %}
+
+        <!-- Hero image credit -->
+        {% if page.hero_credit %}
+          <div class="hero-credit">{{ page.hero_credit }}</div>
+        {% endif %}
+      </div>
+    </header>
+
+    <main class="content">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}    
+
+    <button id="backToTop" title="Torna amunt">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      const backToTop = document.getElementById("backToTop");
+    
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTop.classList.add("show");
+        } else {
+          backToTop.classList.remove("show");
+        }
+      });
+    
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+
+
+  </body>
+</html>
