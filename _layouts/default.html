@@ -4,23 +4,26 @@
   {% include head.html %}
 
   <body>
+
+    {% unless site.minimal %}
     <header class="hero" style="background-image: url('{{ page.hero_image | relative_url }}')">
       <div class="hero-overlay">
 
-        <!-- Language selector -->
-        <div class="lang-container">
-          <div class="lang-selector">
-            <a href="{{ site.baseurl }}/ca/" title="Català" class="{% if page.lang == 'ca' %}active{% endif %}">🇦🇩</a>
-            <a href="{{ site.baseurl }}/es/" title="Español" class="{% if page.lang == 'es' %}active{% endif %}">🇪🇸</a>
-            <a href="{{ site.baseurl }}/en/" title="English" class="{% if page.lang == 'en' %}active{% endif %}">🇬🇧</a>
+        {% if site.multilingual %}
+          <!-- Language selector -->
+          <div class="lang-container">
+            <div class="lang-selector">
+              <a href="{{ site.baseurl }}/ca/" title="Català" class="{% if page.lang == 'ca' %}active{% endif %}">🇦🇩</a>
+              <a href="{{ site.baseurl }}/es/" title="Español" class="{% if page.lang == 'es' %}active{% endif %}">🇪🇸</a>
+              <a href="{{ site.baseurl }}/en/" title="English" class="{% if page.lang == 'en' %}active{% endif %}">🇬🇧</a>
+            </div>
           </div>
-        </div>
+        {% endif %}
 
         <div class="hero-badge">
           Fet amb <i class="fa-solid fa-heart"></i> 
           <a href="{{ site.template.url }}" target="_blank">{{ site.template.name }}</a>
         </div>
-        
 
         <!-- Title + description -->
         <h1>{{ page.title }}</h1>
@@ -41,12 +44,15 @@
         {% endif %}
       </div>
     </header>
+    {% endunless %}
 
     <main class="content">
       {{ content }}
     </main>
 
-    {% include footer.html %}    
+    {% unless site.minimal %}
+      {% include footer.html %}
+    {% endunless %}
 
     <button id="backToTop" title="Torna amunt">
       <i class="fa-solid fa-arrow-up"></i>
@@ -54,20 +60,16 @@
 
     <script>
       const backToTop = document.getElementById("backToTop");
-    
       window.addEventListener("scroll", () => {
         if (window.scrollY > 300) {
-          backToTop.classList.add("show");
+          backToTop.style.display = "block";
         } else {
-          backToTop.classList.remove("show");
+          backToTop.style.display = "none";
         }
       });
-    
       backToTop.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     </script>
-
-
   </body>
 </html>

@@ -3,21 +3,23 @@
 
     <!-- Columna esquerra: títol amb icones i línia de finançament -->
     <div class="footer-left">
-      <p class="project-name">
-        {{ site.project_info.name }}
-        <span class="footer-icons">
-          {% if site.project_info.contact_email %}
-            <a href="mailto:{{ site.project_info.contact_email }}" title="Envia un correu">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
-          {% endif %}
-          {% if site.project_info.website %}
-            <a href="{{ site.project_info.website }}" title="Visita el web" target="_blank" rel="noopener">
-              <i class="fa-solid fa-globe"></i>
-            </a>
-          {% endif %}
-        </span>
-      </p>
+      {% if site.project_info.name %}
+        <p class="project-name">
+          {{ site.project_info.name }}
+          <span class="footer-icons">
+            {% if site.project_info.contact_email %}
+              <a href="mailto:{{ site.project_info.contact_email }}" title="Envia un correu">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            {% endif %}
+            {% if site.project_info.website %}
+              <a href="{{ site.project_info.website }}" title="Visita el web" target="_blank" rel="noopener">
+                <i class="fa-solid fa-globe"></i>
+              </a>
+            {% endif %}
+          </span>
+        </p>
+      {% endif %}
 
       {% if site.project_info.funding %}
         <p class="project-funding">
@@ -27,10 +29,13 @@
     </div>
 
     <!-- Columna dreta: logos -->
-    <div class="footer-right footer-logos">
-      <img src="{{ '/assets/images/logos/dgeo-bandera-color.png' | relative_url }}" alt="Departament de Geografia">
-      <img src="{{ '/assets/images/logos/logo-gratet.jpg' | relative_url }}" alt="GRATET">
-    </div>
+    {% if site.project_info.logos and site.project_info.logos.size > 0 %}
+      <div class="footer-right footer-logos">
+        {% for logo in site.project_info.logos %}
+          <img src="{{ logo.path | relative_url }}" alt="{{ logo.alt | default: 'Logo' }}">
+        {% endfor %}
+      </div>
+    {% endif %}
 
   </div>
 </footer>

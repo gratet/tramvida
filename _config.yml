@@ -1,14 +1,19 @@
+
+multilingual: false
+minimal: false
 default_lang: ca
 
+## Normally used in the footer
 # project_info:
-#  minimal: false
-#  name: "Proyecto Tranvía del Camp"
-#  funding: "Con el apoyo de Ministerio de ..."
-#  contact_email: "xavier.delclos@urv.cat"
-#  website: "https://gratet.github.io/tramvida/"
-#  logos:
-#    - "/assets/images/logos/dgeo-bandera-color.png"
-#    - "/assets/images/logos/logo-gratet.jpg"
+#   name: "Projecte TRAMVIDA"
+#   contact_email: "tramvida@urv.cat"
+#   website: "https://tramvida.urv.cat"
+#   funding: "Projecte finançat pel Departament de Recerca i Universitats de la Generalitat de Catalunya"
+#   logos:
+#     - path: "/assets/images/logos/dgeo-bandera-color.png"
+#       alt: "Departament de Geografia"
+#     - path: "/assets/images/logos/logo-gratet.jpg"
+#       alt: "GRATET"
 
 style:
   green: "#2ea44f"
@@ -25,3 +30,26 @@ style:
 #  url: "https://gratet.urv.cat"
 
 #google_site_verification: "abc123XYZ_your_code_here"
+
+include:
+  - contents
+
+defaults:
+  - scope:
+      path: "contents/ca"
+    values:
+      permalink: "/ca/"
+      lang: ca
+      layout: default
+  - scope:
+      path: "contents/es"
+    values:
+      permalink: "/es/"
+      lang: es
+      layout: default
+  - scope:
+      path: "contents/en"
+    values:
+      permalink: "/en/"
+      lang: en
+      layout: default
