@@ -32,6 +32,8 @@ La participació en l’estudi no suposa cap risc per al participant.
 
 Aquest projecte es fonamenta en la recollida de dades a través d’enquestes anonimitzades, de manera que en cap moment es disposarà d’informació que permeti identificar personalment els participants. Totes les respostes es tractaran de manera agregada i s’emmagatzemaran en entorns segurs proporcionats per la Universitat Rovira i Virgili, complint amb la normativa vigent en matèria de protecció de dades i amb el principi de secret estadístic.
 
+El consentiment informat s'obtindrà verbalment, al tractar-se d'una enquesta telefònica, i quedarà enregistrat i desat als sistemes informàtics de la URV.
+
 La participació en l’enquesta és voluntària i es demanarà consentiment informat abans de respondre. En el cas que les persones participants vulguin formar part d’una segona onada de l’enquesta, prevista per a després de la posada en funcionament del tramvia, se’ls oferirà l’opció de facilitar un mitjà de contacte (per exemple, correu electrònic). Aquestes dades de contacte es guardaran en un fitxer separat i encriptat, sense cap vinculació directa amb les respostes de l’enquesta, i s’utilitzaran únicament per convidar novament les persones a participar en l’estudi.
 
 La base de dades de telèfons emprada per a l’estudi no conté informació de caràcter personal. Als participants se’ls assigna un codi numèric únic que els identifica dintre de l’estudi. Tanmateix, un cop finalitzat el treball de camp, el camp relatiu a les dades personals no s’incorpora en les bases de dades de resultats que es puguin generar i distribuir.  
@@ -51,6 +53,8 @@ La finalitat del tractament de les dades és la participació a l’estudi en ba
 La persona participant a l’estudi pot interrompre la seva participació a l'estudi o estudis futurs retirant el seu consentiment en qualsevol moment, sense necessitat de justificació.  
 
 Aquest estudi no preveu la cessió de dades a tercers ni transferències internacionals de dades personals.
+
+Aquest estudi no preveu la reutilització de les dades en futurs estudis, més enllà de la possible segona fase d'aquest estudi, tal i com es detalla anteriorment.
 
 El període de conservació de les dades és de **5 anys** un cop finalitzat el projecte, excepte si es produeix la revocació del consentiment.
 
